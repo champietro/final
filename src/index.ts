@@ -102,7 +102,7 @@ let vendedor5: string[] = new Array(
   "Agustina"
 );
 
-let obtenerMes = function (semana: number): number {
+function obtenerMes(semana: number): number {
   if (semana >= 1 && semana < 5) {
     mes = 1;
   } else {
@@ -113,12 +113,12 @@ let obtenerMes = function (semana: number): number {
     }
   }
   return mes;
-};
+}
 //1- su venta maxima indicando semana y mes de la misma.
-let ventaMaxima = function (ventas: number[]) {
-  let semana,
-    mes,
-    maxima = number;
+function ventaMaxima(ventas: number[]) {
+  let semana: number;
+  let mes: number;
+  let maxima: number;
   maxima = ventas[0];
   for (let i = 0; i < 13; i++) {
     if (maxima < ventas[i]) {
@@ -128,11 +128,11 @@ let ventaMaxima = function (ventas: number[]) {
   }
   maxima = maxima + 1;
   semana = semana + 1;
-
+  mes = obtenerMes(semana);
   console.log(
     "La venta máximafué en la semana: " + semana + ", en el mes : " + mes
   );
-};
+}
 
 ventaMaxima(vendedor1);
 ventaMaxima(vendedor2);
