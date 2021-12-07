@@ -118,6 +118,30 @@ function obtenerMes(semana: number): number {
   return mes;
 }
 
+function ventaMinima(ventas: number[], vendedor: string) {
+  let semana: number;
+  let mes: number;
+  let minima: number;
+  minima = ventas[0];
+  for (let i = 0; i < 13; i++) {
+    if (minima > ventas[i]) {
+      minima = ventas[i];
+      semana = i;
+    }
+  }
+  minima = minima + 1;
+  semana = semana + 1;
+  mes = obtenerMes(semana);
+  console.log(
+    "La venta mínima de " +
+      vendedor +
+      " fué en la semana: " +
+      semana +
+      ", en el mes : " +
+      mes
+  );
+}
+
 function ventaMaxima(ventas: number[], vendedor: string) {
   let semana: number;
   let mes: number;
@@ -147,3 +171,9 @@ ventaMaxima(vendedor2, nombres[1]);
 ventaMaxima(vendedor3, nombres[2]);
 ventaMaxima(vendedor4, nombres[3]);
 ventaMaxima(vendedor5, nombres[4]);
+
+ventaMinima(vendedor1, nombres[0]);
+ventaMinima(vendedor2, nombres[1]);
+ventaMinima(vendedor3, nombres[2]);
+ventaMinima(vendedor4, nombres[3]);
+ventaMinima(vendedor5, nombres[4]);
