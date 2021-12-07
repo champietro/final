@@ -127,14 +127,18 @@ function obtenerMes(semana: number): number {
   return mes;
 }
 
-function promedioMensual(
-  ventas1: number[],
-  ventas2: number[],
-  ventas3: number[],
-  ventas4: number[],
-  ventas5: number[],
-  vendedor: string[]
-) {}
+function promedioMensual(ventas1: number[], ventas2: number[],ventas3: number[],ventas4: number[],ventas5: number[],vendedor: string[]) {
+  let promedio: number;
+  for (let mes = 0; mes < 3; mes++) {
+    promedio = 0;
+    for (let semana = 0; semana < 4; semana++) {
+      promedio = promedio + ;
+    }
+  }
+  promedio = promedio / 12;
+  console.log("El promedio semanal de " + vendedor + " es de $" + promedio);
+
+}
 
 function ventaMinima(ventas: number[], vendedor: string) {
   let semana: number;
