@@ -146,23 +146,22 @@ function mejorVendedorSemana(
       ventas5[semana]
     );
     if (maxima == ventas1[semana]) {
-      sem = semana;
+      vendedor = nombres[0];
     } else {
       if (maxima == ventas2[semana]) {
-        sem = semana;
+        vendedor = nombres[1];
       } else {
         if (maxima == ventas3[semana]) {
-          sem = semana;
+          vendedor = nombres[2];
         } else {
           if (maxima == ventas4[semana]) {
-            sem = semana;
+            vendedor = nombres[3];
           } else {
-            sem = semana;
+            vendedor = nombres[4];
           }
         }
       }
     }
-    vendedor = nombres[sem];
     console.log(
       vendedor +
         " fué quién más vendió en esa semana con un monto de: $" +
@@ -285,16 +284,3 @@ mejorVendedorSemana(
   vendedor5,
   nombres
 );
-/*-------------------------------------
-
-let nombres: string[] = new Array("Gabriel", "Juan Pedro", "María");
-let ventas: number[] = new Array(22, 33, 44);
-
-
-
-function buscarVentas(personas: , ventas){
-
-}
-
-
-buscarVentas(nombres, ventas)*/
