@@ -127,14 +127,51 @@ function obtenerMes(semana: number): number {
   return mes;
 }
 
-function promedioMensual(ventas1: number[], ventas2: number[],ventas3: number[],ventas4: number[],ventas5: number[],vendedor: string[]) {
-  let promedio: number;
-  for (let mes = 0; mes < 3; mes++) {
-    promedio = 0;
-    for (let semana = 0; semana < 4; semana++) {
-      promedio = promedio + ;
+function promedioMensual(ventas: number[], vendedor: string[]) {
+  let promedio: number = 0;
+  let mes : number;
+  for (let i = 0; i < 12; i++) {
+  promedio = promedio + ventas[i];
+  switch(i){
+    case 3:{
+          mes = 1;
+          console.log("El promedio del mes +"mes+" de "+vendedor+" es: "promedio);
+          promedio = 0;
+      break;
+    }
+    case 7:{
+        mes = 2;
+        console.log("El promedio del mes +"mes+" de "+vendedor+" es: "promedio);
+          promedio = 0;
+      break;
+    }
+    case 11:{
+        mes = 3;
+        console.log("El promedio del mes +"mes+" de "+vendedor+" es: "promedio);
+          promedio = 0;
+      break;
     }
   }
+  }
+  
+  
+  
+  
+  
+  for (let mes = 0; mes < 4; mes++) {
+    promedio = 0;
+    for (let semana = 4; semana < 8; semana++) {
+      promedio = promedio + ventas;
+    }
+    for (let semana = 8; semana < 13; semana++) {
+      promedio = promedio + ventas;
+    }
+  }
+
+
+
+
+
   promedio = promedio / 12;
   console.log("El promedio semanal de " + vendedor + " es de $" + promedio);
 
@@ -206,7 +243,11 @@ promedioSemanal(vendedor3, nombres[2]);
 promedioSemanal(vendedor4, nombres[3]);
 promedioSemanal(vendedor5, nombres[4]);
 
-promedioMensual(vendedor1, vendedor2, vendedor3, vendedor4, vendedor5, nombres);
+promedioMensual(vendedor1, nombres[0]);
+promedioMensual(vendedor2, nombres[1]);
+promedioMensual(vendedor3, nombres[2]);
+promedioMensual(vendedor4, nombres[3]);
+promedioMensual(vendedor5, nombres[4]);
 
 /*-------------------------------------
 
