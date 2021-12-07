@@ -127,33 +127,49 @@ function obtenerMes(semana: number): number {
   return mes;
 }
 
-
-function mejorVendedorSemana(ventas1, ventas2, ventas3, ventas4, ventas5: number[], nombres: string[]){
-  let maxima, sem : number;
-
-  for(let semana = 0;semana <12;semana++){
-    maxima =  Math.max(ventas1, ventas2, ventas3, ventas4, ventas5);
-    if(maxima == ventas1[semana]{
+function mejorVendedorSemana(
+  ventas1,
+  ventas2,
+  ventas3,
+  ventas4,
+  ventas5: number[],
+  nombres: string[]
+) {
+  let maxima, sem: number;
+  let vendedor: string;
+  for (let semana = 0; semana < 12; semana++) {
+    maxima = Math.max(
+      ventas1[semana],
+      ventas2[semana],
+      ventas3[semana],
+      ventas4[semana],
+      ventas5[semana]
+    );
+    if (maxima == ventas1[semana]) {
       sem = semana;
-    }else{
-      if(maxima == ventas2[semana]{
+    } else {
+      if (maxima == ventas2[semana]) {
         sem = semana;
-      }else{
-        if(maxima == ventas3[semana]{
+      } else {
+        if (maxima == ventas3[semana]) {
           sem = semana;
-        }else{
-          if(maxima == ventas4[semana]{
+        } else {
+          if (maxima == ventas4[semana]) {
             sem = semana;
-          }else{
+          } else {
             sem = semana;
-            }
+          }
         }
       }
     }
-    console.log("");
+    vendedor = nombres[sem];
+    console.log(
+      vendedor +
+        " fué quién más vendió en esa semana con un monto de: $" +
+        maxima
+    );
   }
 }
-
 
 function promedioMensual(ventas: number[], vendedor: string[]) {
   let promedio: number = 0;
@@ -261,7 +277,14 @@ promedioMensual(vendedor3, nombres[2]);
 promedioMensual(vendedor4, nombres[3]);
 promedioMensual(vendedor5, nombres[4]);
 
-mejorVendedorSemana(vendedor1, vendedor2, vendedor3, vendedor4, vendedor5, nombres);
+mejorVendedorSemana(
+  vendedor1,
+  vendedor2,
+  vendedor3,
+  vendedor4,
+  vendedor5,
+  nombres
+);
 /*-------------------------------------
 
 let nombres: string[] = new Array("Gabriel", "Juan Pedro", "María");
