@@ -10,11 +10,11 @@ vendedor5 [23334, 32687, 25217, 26844, 27033, 35244, 25702, 25781, 35525, 34874,
 
 Escribir un programa que permita determinar:Para cada vendedor mostrar su nombre y 
 1- su venta maxima indicando semana y mes de la misma.
-----------------------------------------------------------
 2- su venta minima indicando semana y mes de la misma.
-----------------------------------------------------------
 3- su promedio semanal de ventas.
+----------------------------------------------------------
 4- su promedio mensual de ventas.Entre todos los vendedores calcular:
+----------------------------------------------------------
 5- nombre y monto vendido del mejor vendedor de cada semana.
 6- nombre y suma de montos vendidos del mejor vendedor de cada mes
 7- nombre y suma de montos vendidos del peor vendedor de cada mes
@@ -104,6 +104,17 @@ let nombres: string[] = new Array(
   "Agustina"
 );
 
+function promedioSemanal(ventas: number[], vendedor: string) {
+  let promedio: number;
+  promedio = 0;
+
+  for (let i = 0; i < 12; i++) {
+    promedio = promedio + ventas[i];
+  }
+  promedio = promedio / 12;
+  console.log("El promedio semanal de " + vendedor + " es de " + promedio);
+}
+
 function obtenerMes(semana: number): number {
   let mes: number;
   if (semana >= 1 && semana < 5) {
@@ -177,3 +188,9 @@ ventaMinima(vendedor2, nombres[1]);
 ventaMinima(vendedor3, nombres[2]);
 ventaMinima(vendedor4, nombres[3]);
 ventaMinima(vendedor5, nombres[4]);
+
+promedioSemanal(vendedor1, nombres[0]);
+promedioSemanal(vendedor2, nombres[1]);
+promedioSemanal(vendedor3, nombres[2]);
+promedioSemanal(vendedor4, nombres[3]);
+promedioSemanal(vendedor5, nombres[4]);
