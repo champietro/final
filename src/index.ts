@@ -105,14 +105,12 @@ let nombres: string[] = new Array(
 );
 
 function promedioSemanal(ventas: number[], vendedor: string) {
-  let promedio: number;
-  promedio = 0;
-
+  let promedio: number = 0;
   for (let i = 0; i < 12; i++) {
     promedio = promedio + ventas[i];
   }
   promedio = promedio / 12;
-  console.log("El promedio semanal de " + vendedor + " es de " + promedio);
+  console.log("El promedio semanal de " + vendedor + " es de $" + promedio);
 }
 
 function obtenerMes(semana: number): number {
@@ -209,15 +207,13 @@ promedioMensual(vendedor1, vendedor2, vendedor3, vendedor4, vendedor5, nombres);
 /*-------------------------------------
 
 let nombres: string[] = new Array("Gabriel", "Juan Pedro", "María");
-let ventas: number[] = new Array(22, 33 44);
-
-
-/* LÓGICA (DECLARACIONES Y FUNCIONES)
-function buscarVentas(personas, ventas)
+let ventas: number[] = new Array(22, 33, 44);
 
 
 
-/*PROGRMA PRINCIPAL 
-buscarVentas(nombres, ventas)
+function buscarVentas(personas: , ventas){
 
-*/
+}
+
+
+buscarVentas(nombres, ventas)*/
