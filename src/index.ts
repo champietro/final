@@ -129,52 +129,36 @@ function obtenerMes(semana: number): number {
 
 function promedioMensual(ventas: number[], vendedor: string[]) {
   let promedio: number = 0;
-  let mes : number;
+  let mes: number;
   for (let i = 0; i < 12; i++) {
-  promedio = promedio + ventas[i];
-  switch(i){
-    case 3:{
-          mes = 1;
-          console.log("El promedio del mes +"mes+" de "+vendedor+" es: "promedio);
-          promedio = 0;
-      break;
-    }
-    case 7:{
+    promedio = promedio + ventas[i];
+    switch (i) {
+      case 3: {
+        mes = 1;
+        console.log(
+          "El promedio del mes " + mes + " de " + vendedor + " es: " + promedio
+        );
+        promedio = 0;
+        break;
+      }
+      case 7: {
         mes = 2;
-        console.log("El promedio del mes +"mes+" de "+vendedor+" es: "promedio);
-          promedio = 0;
-      break;
-    }
-    case 11:{
+        console.log(
+          "El promedio del mes " + mes + " de " + vendedor + " es: " + promedio
+        );
+        promedio = 0;
+        break;
+      }
+      case 11: {
         mes = 3;
-        console.log("El promedio del mes +"mes+" de "+vendedor+" es: "promedio);
-          promedio = 0;
-      break;
+        console.log(
+          "El promedio del mes " + mes + " de " + vendedor + " es: " + promedio
+        );
+        promedio = 0;
+        break;
+      }
     }
   }
-  }
-  
-  
-  
-  
-  
-  for (let mes = 0; mes < 4; mes++) {
-    promedio = 0;
-    for (let semana = 4; semana < 8; semana++) {
-      promedio = promedio + ventas;
-    }
-    for (let semana = 8; semana < 13; semana++) {
-      promedio = promedio + ventas;
-    }
-  }
-
-
-
-
-
-  promedio = promedio / 12;
-  console.log("El promedio semanal de " + vendedor + " es de $" + promedio);
-
 }
 
 function ventaMinima(ventas: number[], vendedor: string) {
