@@ -129,18 +129,14 @@ function obtenerMes(semana: number): number {
   return mes;
 }
 
-
-
-
-
-
-(vendedor1, vendedor2, vendedor3, vendedor4, vendedor5, nombres);
-
-function promedioMensual(ventas1: number[], ventas2: number[], ventas3: number[], ventas4: number[], ventas5: number[], vendedor: string[]) {
-
-}
-
-
+function promedioMensual(
+  ventas1: number[],
+  ventas2: number[],
+  ventas3: number[],
+  ventas4: number[],
+  ventas5: number[],
+  vendedor: string[]
+) {}
 
 function ventaMinima(ventas: number[], vendedor: string) {
   let semana: number;
@@ -208,5 +204,20 @@ promedioSemanal(vendedor3, nombres[2]);
 promedioSemanal(vendedor4, nombres[3]);
 promedioSemanal(vendedor5, nombres[4]);
 
-
 promedioMensual(vendedor1, vendedor2, vendedor3, vendedor4, vendedor5, nombres);
+
+/*-------------------------------------
+
+let nombres: string[] = new Array("Gabriel", "Juan Pedro", "María");
+let ventas: number[] = new Array(22, 33 44);
+
+
+/* LÓGICA (DECLARACIONES Y FUNCIONES)
+function buscarVentas(personas, ventas)
+
+
+
+/*PROGRMA PRINCIPAL 
+buscarVentas(nombres, ventas)
+
+*/
