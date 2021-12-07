@@ -94,7 +94,7 @@ let vendedor5: number[] = new Array(
   20562
 );
 
-let vendedor5: string[] = new Array(
+let nombres: string[] = new Array(
   "Camila",
   "Franco",
   "Sofia",
@@ -103,6 +103,7 @@ let vendedor5: string[] = new Array(
 );
 
 function obtenerMes(semana: number): number {
+  let mes: number;
   if (semana >= 1 && semana < 5) {
     mes = 1;
   } else {
@@ -130,7 +131,7 @@ function ventaMaxima(ventas: number[]) {
   semana = semana + 1;
   mes = obtenerMes(semana);
   console.log(
-    "La venta máximafué en la semana: " + semana + ", en el mes : " + mes
+    "La venta máxima fué en la semana: " + semana + ", en el mes : " + mes
   );
 }
 
