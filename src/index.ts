@@ -127,6 +127,34 @@ function obtenerMes(semana: number): number {
   return mes;
 }
 
+
+function mejorVendedorSemana(ventas1, ventas2, ventas3, ventas4, ventas5: number[], nombres: string[]){
+  let maxima, sem : number;
+
+  for(let semana = 0;semana <12;semana++){
+    maxima =  Math.max(ventas1, ventas2, ventas3, ventas4, ventas5);
+    if(maxima == ventas1[semana]{
+      sem = semana;
+    }else{
+      if(maxima == ventas2[semana]{
+        sem = semana;
+      }else{
+        if(maxima == ventas3[semana]{
+          sem = semana;
+        }else{
+          if(maxima == ventas4[semana]{
+            sem = semana;
+          }else{
+            sem = semana;
+            }
+        }
+      }
+    }
+    console.log("");
+  }
+}
+
+
 function promedioMensual(ventas: number[], vendedor: string[]) {
   let promedio: number = 0;
   let mes: number;
@@ -233,6 +261,7 @@ promedioMensual(vendedor3, nombres[2]);
 promedioMensual(vendedor4, nombres[3]);
 promedioMensual(vendedor5, nombres[4]);
 
+mejorVendedorSemana(vendedor1, vendedor2, vendedor3, vendedor4, vendedor5, nombres);
 /*-------------------------------------
 
 let nombres: string[] = new Array("Gabriel", "Juan Pedro", "María");
