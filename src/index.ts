@@ -10,7 +10,9 @@ vendedor5 [23334, 32687, 25217, 26844, 27033, 35244, 25702, 25781, 35525, 34874,
 
 Escribir un programa que permita determinar:Para cada vendedor mostrar su nombre y 
 1- su venta maxima indicando semana y mes de la misma.
+----------------------------------------------------------
 2- su venta minima indicando semana y mes de la misma.
+----------------------------------------------------------
 3- su promedio semanal de ventas.
 4- su promedio mensual de ventas.Entre todos los vendedores calcular:
 5- nombre y monto vendido del mejor vendedor de cada semana.
@@ -115,8 +117,8 @@ function obtenerMes(semana: number): number {
   }
   return mes;
 }
-//1- su venta maxima indicando semana y mes de la misma.
-function ventaMaxima(ventas: number[]) {
+
+function ventaMaxima(ventas: number[], vendedor: string) {
   let semana: number;
   let mes: number;
   let maxima: number;
@@ -131,12 +133,17 @@ function ventaMaxima(ventas: number[]) {
   semana = semana + 1;
   mes = obtenerMes(semana);
   console.log(
-    "La venta máxima fué en la semana: " + semana + ", en el mes : " + mes
+    "La venta máxima de " +
+      vendedor +
+      " fué en la semana: " +
+      semana +
+      ", en el mes : " +
+      mes
   );
 }
 
-ventaMaxima(vendedor1);
-ventaMaxima(vendedor2);
-ventaMaxima(vendedor3);
-ventaMaxima(vendedor4);
-ventaMaxima(vendedor5);
+ventaMaxima(vendedor1, nombres[0]);
+ventaMaxima(vendedor2, nombres[1]);
+ventaMaxima(vendedor3, nombres[2]);
+ventaMaxima(vendedor4, nombres[3]);
+ventaMaxima(vendedor5, nombres[4]);
