@@ -12,9 +12,7 @@ Escribir un programa que permita determinar:Para cada vendedor mostrar su nombre
 1- su venta maxima indicando semana y mes de la misma.
 2- su venta minima indicando semana y mes de la misma.
 3- su promedio semanal de ventas.
-----------------------------------------------------------
 4- su promedio mensual de ventas.Entre todos los vendedores calcular:
-----------------------------------------------------------
 5- nombre y monto vendido del mejor vendedor de cada semana.
 6- nombre y suma de montos vendidos del mejor vendedor de cada mes
 7- nombre y suma de montos vendidos del peor vendedor de cada mes
@@ -127,6 +125,15 @@ function obtenerMes(semana: number): number {
   return mes;
 }
 
+/*6- nombre y suma de montos vendidos del mejor vendedor de cada mes */
+function mejorVendedorMes(
+  ventas1,
+  ventas2,
+  ventas3,
+  ventas4,
+  ventas5: number[],
+  nombres: string[]
+) {}
 function mejorVendedorSemana(
   ventas1,
   ventas2,
@@ -277,6 +284,15 @@ promedioMensual(vendedor4, nombres[3]);
 promedioMensual(vendedor5, nombres[4]);
 
 mejorVendedorSemana(
+  vendedor1,
+  vendedor2,
+  vendedor3,
+  vendedor4,
+  vendedor5,
+  nombres
+);
+
+mejorVendedorMes(
   vendedor1,
   vendedor2,
   vendedor3,
