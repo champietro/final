@@ -122,6 +122,22 @@ function obtenerMes(semana: number): number {
 }
 
 /*6- nombre y suma de montos vendidos del mejor vendedor de cada mes */
+
+function getMaxima(v1,v2,v3,v4,v5: number): number{
+  let ventas: number[] = new Array(v1,v2,v3,v4,v5);
+  let vendedor: number;
+let suma:number;
+suma = ventas[0];
+for(let i=0;i<5;i++){
+  if(suma < ventas[i]){
+    suma = ventas[i];
+    vendedor = i;
+  }
+
+}
+return(suma, i);
+}
+
 function mejorVendedorMes(
   ventas1,
   ventas2,
@@ -147,24 +163,7 @@ function mejorVendedorMes(
     switch (i) {
       case 3: {
         mes = 1;
-        maxima = Math.max(v1, v2, v3, v4, v5);
-        if (maxima == v1) {
-          vendedor = nombres[0];
-        } else {
-          if (maxima == v2) {
-            vendedor = nombres[1];
-          } else {
-            if (maxima == v3) {
-              vendedor = nombres[2];
-            } else {
-              if (maxima == v4) {
-                vendedor = nombres[3];
-              } else {
-                vendedor = nombres[4];
-              }
-            }
-          }
-        }
+        maxima = getMaxima(v1,v2,v3,v4,v5);
         console.log(vendedor + " fué quien más vendió en el mes ");
         v1 = 0;
         v2 = 0;
