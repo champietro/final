@@ -138,14 +138,14 @@ function getMaxima(v1,v2,v3,v4,v5: number){
 	return[suma, persona];
 }
 
-function getMinima(v1,v2,v3,v4,v5: number){
+function getMinima(v1: number,v2: number,v3: number,v4: number,v5: number){
 	let ventas: number[] = new Array(v1,v2,v3,v4,v5);
 	let persona: number;
 	let suma:number;
-  suma = 0;
+  suma = ventas[0];
   persona = 0;
 	for(let i=0;i<5;i++){
-		if(suma < ventas[i]){
+		if(suma > ventas[i]){
 			suma = ventas[i];
 			persona = i;
 		}		
@@ -154,7 +154,7 @@ function getMinima(v1,v2,v3,v4,v5: number){
 }
 
 function peorVendedorMes(ventas1,ventas2,ventas3,ventas4,ventas5: number[],nombres: string[]) {
-	let v1: number = 0;let v2: number = 0;let v3: number = 0;;let v4: number = 0;let  v5: number = 0;
+	let v1: number = 0;let v2: number = 0;let v3: number = 0;let v4: number = 0;let  v5: number = 0;
 	let vendedor: number;
 	for (let i = 0; i < 12; i++) {
 		v1 = v1 + ventas1[i];
@@ -166,7 +166,7 @@ function peorVendedorMes(ventas1,ventas2,ventas3,ventas4,ventas5: number[],nombr
 			case 3: {
         let variables = getMinima(v1,v2,v3,v4,v5);
 				vendedor = variables[1];
-				console.log("Peor vendedor del mes 1:"+nombres[vendedor] + ". Monto: $"+variables[0]);
+				console.log("Peor vendedor del mes 1:"+nombres[vendedor]+". Monto: $"+variables[0]);
 				v1 = 0;
 				v2 = 0;
 				v3 = 0;
@@ -177,7 +177,7 @@ function peorVendedorMes(ventas1,ventas2,ventas3,ventas4,ventas5: number[],nombr
 			case 7: {
 				let variables = getMinima(v1,v2,v3,v4,v5);
 				vendedor = variables[1];
-				console.log("Peor vendedor del mes 2:"+nombres[vendedor] + ". Monto: $"+variables[0]);
+				console.log("Peor vendedor del mes 2:"+nombres[vendedor]+". Monto: $"+variables[0]);
 				v1 = 0;
 				v2 = 0;
 				v3 = 0;
@@ -187,7 +187,7 @@ function peorVendedorMes(ventas1,ventas2,ventas3,ventas4,ventas5: number[],nombr
 			}
 			case 11: {
 				let variables = getMinima(v1,v2,v3,v4,v5);
-				console.log("Peor vendedor del mes 3:"+nombres[vendedor] + ". Monto: $"+variables[0]);
+				console.log("Peor vendedor del mes 3:"+nombres[vendedor]+". Monto: $"+variables[0]);
 				v1 = 0;
 				v2 = 0;
 				v3 = 0;
@@ -200,7 +200,7 @@ function peorVendedorMes(ventas1,ventas2,ventas3,ventas4,ventas5: number[],nombr
 }
 
 function mejorVendedorMes(ventas1,ventas2,ventas3,ventas4,ventas5: number[],nombres: string[]) {
-	let v1: number = 0;let v2: number = 0;let v3: number = 0;;let v4: number = 0;let  v5: number = 0;
+	let v1: number = 0;let v2: number = 0;let v3: number = 0;let v4: number = 0;let  v5: number = 0;
 	let vendedor: number;
 	for (let i = 0; i < 12; i++) {
 		v1 = v1 + ventas1[i];
@@ -212,7 +212,7 @@ function mejorVendedorMes(ventas1,ventas2,ventas3,ventas4,ventas5: number[],nomb
 			case 3: {
 				let variables = getMaxima(v1,v2,v3,v4,v5);
 				vendedor = variables[1];
-				console.log("Mejor vendedor del mes 1:"+nombres[vendedor] + ". Monto: $"+variables[0]);
+				console.log("Mejor vendedor del mes 1:"+nombres[vendedor]+". Monto: $"+variables[0]);
 				v1 = 0;
 				v2 = 0;
 				v3 = 0;
@@ -223,7 +223,7 @@ function mejorVendedorMes(ventas1,ventas2,ventas3,ventas4,ventas5: number[],nomb
 			case 7: {
 				let variables = getMaxima(v1,v2,v3,v4,v5);
 				vendedor = variables[1];
-				console.log("Mejor vendedor del mes 2:"+nombres[vendedor] + ". Monto: $"+variables[0]);
+				console.log("Mejor vendedor del mes 2:"+nombres[vendedor]+". Monto: $"+variables[0]);
 				v1 = 0;
 				v2 = 0;
 				v3 = 0;
@@ -233,7 +233,7 @@ function mejorVendedorMes(ventas1,ventas2,ventas3,ventas4,ventas5: number[],nomb
 			}
 			case 11: {
 				let variables = getMaxima(v1,v2,v3,v4,v5);
-				console.log("Mejor vendedor del mes 3:"+nombres[vendedor] + ". Monto: $"+variables[0]);
+				console.log("Mejor vendedor del mes 3:"+nombres[vendedor]+". Monto: $"+variables[0]);
 				v1 = 0;
 				v2 = 0;
 				v3 = 0;
