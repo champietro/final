@@ -154,7 +154,7 @@ function getMinima(v1,v2,v3,v4,v5: number){
 }
 
 function peorVendedorMes(ventas1,ventas2,ventas3,ventas4,ventas5: number[],nombres: string[]) {
-	let v1,v2,v3,v4,v5: number = 0;
+	let v1: number = 0;let v2: number = 0;let v3: number = 0;;let v4: number = 0;let  v5: number = 0;
 	let vendedor: number;
 	for (let i = 0; i < 12; i++) {
 		v1 = v1 + ventas1[i];
@@ -200,7 +200,7 @@ function peorVendedorMes(ventas1,ventas2,ventas3,ventas4,ventas5: number[],nombr
 }
 
 function mejorVendedorMes(ventas1,ventas2,ventas3,ventas4,ventas5: number[],nombres: string[]) {
-	let v1,v2,v3,v4,v5: number = 0;
+	let v1: number = 0;let v2: number = 0;let v3: number = 0;;let v4: number = 0;let  v5: number = 0;
 	let vendedor: number;
 	for (let i = 0; i < 12; i++) {
 		v1 = v1 + ventas1[i];
