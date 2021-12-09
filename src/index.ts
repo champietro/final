@@ -312,30 +312,29 @@ function mejorVendedorSemana(
 
 function promedioMensual(ventas: number[], vendedor: string[]) {
   let promedio: number = 0;
-  let mes: number;
   for (let i = 0; i < 12; i++) {
     promedio = promedio + ventas[i];
     switch (i) {
       case 3: {
-        mes = 1;
+        promedio = promedio/4;
         console.log(
-          "El promedio del mes " + mes + " de " + vendedor + " es: " + promedio
+          "El promedio del mes 1 de " + vendedor + " es: " + promedio
         );
         promedio = 0;
         break;
       }
       case 7: {
-        mes = 2;
+        promedio = promedio/4;
         console.log(
-          "El promedio del mes " + mes + " de " + vendedor + " es: " + promedio
+          "El promedio del mes 2 de " + vendedor + " es: " + promedio
         );
         promedio = 0;
         break;
       }
       case 11: {
-        mes = 3;
+        promedio = promedio/4;
         console.log(
-          "El promedio del mes " + mes + " de " + vendedor + " es: " + promedio
+          "El promedio del mes 3 de " + vendedor + " es: " + promedio
         );
         promedio = 0;
         break;
