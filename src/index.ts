@@ -245,6 +245,28 @@ function mejorVendedorMes(ventas1,ventas2,ventas3,ventas4,ventas5: number[],nomb
 	}
 }
 
+function peorVendedorTrimestre(ventas1,ventas2;ventas3,ventas4,ventas5: number[],nombres: string[]) {
+  let maxima: number;
+  let v1: number = 0;
+  let v2: number = 0;
+  let v3: number = 0;
+  let v4: number = 0;
+  let v5: number = 0;
+  let maxima: number;
+  let vendedor: string;
+  for (let semana = 0; semana < 12; semana++) {
+    v1 = v1 + ventas1[semana];
+    v2 = v2 + ventas2[semana];
+    v3 = v3 + ventas3[semana];
+    v4 = v4 + ventas4[semana];
+    v5 = v5 + ventas5[semana];
+  }
+
+  let variables = getMinima(v1,v2,v3,v4,v5);
+  vendedor = variables[1];
+	console.log("Peor vendedor del trimestre:"+nombres[vendedor]+". Monto: $"+variables[0]);
+}
+
 function mejorVendedorSemana(
   ventas1,
   ventas2;
@@ -421,4 +443,11 @@ peorVendedorMes(
   nombres
 );
 
-
+peorVendedorTrimestre(
+  vendedor1,
+  vendedor2,
+  vendedor3,
+  vendedor4,
+  vendedor5,
+  nombres
+);
